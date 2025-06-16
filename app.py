@@ -3,13 +3,13 @@ import requests
 
 app = Flask(__name__)
 
-# Health check route
+
 @app.route('/', methods=['GET'])
 def home():
     return "✅ Chatbot backend is live!"
 
-# Dialogflow webhook route
-@app.route('/webhook', methods=['POST'])  # Changed '/' to '/webhook'
+
+@app.route('/webhook', methods=['POST'])  
 def index():
     data = request.get_json()
 
